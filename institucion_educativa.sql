@@ -11,7 +11,6 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
 
-
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
@@ -40,7 +39,72 @@ CREATE TABLE `datos_docente` (
 --
 
 INSERT INTO `datos_docente` (`id_docente`, `nombres`, `apellidos`, `nip`, `nup`) VALUES
-(1, 'Miriam Mercedes', 'Galan de Guevara', '22392', '93292');
+(1, 'Carlos Roberto', 'Martínez Fuentes', '11204', '74501'),
+(2, 'Elena Patricia', 'Vásquez de Morales', '33817', '82934'),
+(3, 'Jorge Armando', 'Salinas Contreras', '55629', '61047');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `datos_responsables`
+--
+
+CREATE TABLE `datos_responsables` (
+  `id_responsable` int(11) NOT NULL,
+  `nombres` varchar(50) NOT NULL,
+  `apellidos` varchar(50) NOT NULL,
+  `numero_dui` varchar(10) NOT NULL,
+  `telefono` varchar(15) DEFAULT NULL,
+  `correo` varchar(100) DEFAULT NULL,
+  `direccion_vivienda` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Volcado de datos para la tabla `datos_responsables`
+--
+
+INSERT INTO `datos_responsables` (`id_responsable`, `nombres`, `apellidos`, `numero_dui`, `telefono`, `correo`, `direccion_vivienda`) VALUES
+(1,  'Roberto Carlos',   'López Mendoza',      '01234567-8', '7100-1001', 'roberto.lopez@gmail.com',      'Col. Escalón, San Salvador'),
+(2,  'María Fernanda',   'Cruz de Hernández',  '02345678-9', '7100-1002', 'mfcruz.hdez@gmail.com',        'Res. Santa Elena, Antiguo Cuscatlán'),
+(3,  'José Manuel',      'Pérez Aquino',       '03456789-0', '7100-1003', 'josemperez.aq@hotmail.com',    'Bo. San Jacinto, San Salvador'),
+(4,  'Ana Beatriz',      'Gómez Villalta',     '04567890-1', '7100-1004', 'anabgomez84@gmail.com',        'Col. Miramonte, San Salvador'),
+(5,  'Luis Ernesto',     'Ramos Escobar',      '05678901-2', '7100-1005', 'luisramos.esc@outlook.com',    'Urb. Bello Horizonte, San Salvador'),
+(6,  'Sandra Yolanda',   'Flores de Torres',   '06789012-3', '7100-1006', 'sandraflores.yt@gmail.com',    'Col. Zacamil, Mejicanos'),
+(7,  'Francisco Javier', 'Molina Guardado',    '07890123-4', '7100-1007', 'fjmolina.gd@gmail.com',        'Col. San Benito, San Salvador'),
+(8,  'Carmen Alicia',    'Zelaya de Ochoa',    '08901234-5', '7100-1008', 'carmenzelaya.oc@gmail.com',    'Res. Los Laureles, Santa Tecla'),
+(9,  'Miguel Ángel',     'Díaz Renderos',      '09012345-6', '7100-1009', 'migueldiaz.rd@gmail.com',      'Col. Las Mercedes, Soyapango'),
+(10, 'Gloria Eugenia',   'Chávez Portillo',    '00123456-7', '7100-1010', 'gloriachavez.pt@gmail.com',    'Bo. La Vega, San Marcos'),
+(11, 'Héctor Antonio',   'Alvarado Merino',    '01122334-5', '7100-1011', 'hectoralv.mr@outlook.com',     'Col. Floresta, San Salvador'),
+(12, 'Verónica Isabel',  'Guzmán de Peña',     '02233445-6', '7100-1012', 'veronicagp.iz@gmail.com',      'Urb. Lomas de San Francisco, SF'),
+(13, 'Eduardo Alfredo',  'Reyes Bonilla',      '03344556-7', '7100-1013', 'eduardorb.af@gmail.com',       'Col. Jardines de Guadalupe, Antiguo'),
+(14, 'Patricia Lorena',  'Soriano de Cabrera', '04455667-8', '7100-1014', 'patriciasc.lr@gmail.com',      'Bo. Santa Anita, San Salvador'),
+(15, 'Ricardo Emilio',   'Castellanos Nolasco','05566778-9', '7100-1015', 'ricardocn.em@hotmail.com',     'Col. Madre Selva, Antiguo Cuscatlán'),
+(16, 'Martha Cecilia',   'Interiano de Ruiz',  '06677889-0', '7100-1016', 'marthair.cc@gmail.com',        'Urb. Monte Bello, San Salvador'),
+(17, 'Óscar Mauricio',   'Serrano Pacheco',    '07788990-1', '7100-1017', 'oscarspc.mr@gmail.com',        'Col. Centroamérica, San Salvador'),
+(18, 'Silvia Marina',    'Luna de Aguilar',    '08899001-2', '7100-1018', 'silvialag.mn@gmail.com',       'Res. Jardines del Valle, SA'),
+(19, 'Gerardo Rubén',    'Campos Melara',       '09900112-3', '7100-1019', 'gerardocm.rb@outlook.com',    'Bo. Modelo, San Salvador'),
+(20, 'Ingrid Yaqueline', 'Coto de Sánchez',    '00011223-4', '7100-1020', 'ingridcs.yq@gmail.com',        'Col. San Luis, San Salvador'),
+(21, 'Alberto Iván',     'Quintero Monge',      '01122334-0', '7100-1021', 'albertoqm.iv@gmail.com',      'Urb. Villa Centroamérica, Soyapango'),
+(22, 'Norma Estela',     'Villeda de Acosta',  '02233445-1', '7100-1022', 'normaav.es@gmail.com',         'Col. Layco, San Salvador'),
+(23, 'Josué Alejandro',  'Portillo Mejía',     '03344556-2', '7100-1023', 'josuepm.aj@gmail.com',         'Bo. San Antonio Abad, SS'),
+(24, 'Elsa Guadalupe',   'Meléndez de Rivera', '04455667-3', '7100-1024', 'elsamr.gp@hotmail.com',        'Col. Costa Rica, San Salvador'),
+(25, 'René Arturo',      'Herrera Aguiluz',    '05566778-4', '7100-1025', 'reneha.at@gmail.com',          'Res. Lomas del Río, San Salvador'),
+(26, 'Claudia Beatriz',  'Amaya de García',    '06677889-5', '7100-1026', 'claudiaag.bt@gmail.com',       'Col. Jardines de Cuzcatlán, SS'),
+(27, 'Nelson Enrique',   'Fuentes Orellana',   '07788990-6', '7100-1027', 'nelsonfo.en@gmail.com',        'Urb. San Jacinto, San Salvador'),
+(28, 'Roxana del Carmen','Medina de Galdámez', '08899001-7', '7100-1028', 'roxanamg.dc@gmail.com',        'Col. Ramírez, San Salvador'),
+(29, 'Wilber Adalberto', 'Martínez Rivas',     '09900112-8', '7100-1029', 'wilbermr.ab@outlook.com',      'Bo. Candelaria, San Salvador'),
+(30, 'Consuelo Marisol', 'Leiva de Montes',    '00011223-9', '7100-1030', 'consuelolm.ms@gmail.com',      'Col. San Carlos, Soyapango'),
+(31, 'Rolando Aníbal',   'Ventura Espinoza',   '01234560-1', '7100-1031', 'rolandove.an@gmail.com',       'Urb. El Rosal, San Salvador'),
+(32, 'Iris Marlene',     'Argueta de Flores',  '02345671-2', '7100-1032', 'irisaf.ml@gmail.com',          'Col. La Ceiba, San Salvador'),
+(33, 'César Augusto',    'Bonilla Galindo',    '03456782-3', '7100-1033', 'cesarbg.ag@hotmail.com',       'Bo. Santa Bárbara, San Salvador'),
+(34, 'Mirna Yaneth',     'Guardado de Lima',   '04567893-4', '7100-1034', 'mirnagl.yn@gmail.com',         'Col. Modelo, San Salvador'),
+(35, 'Tobías Samuel',    'Morán Durán',        '05678904-5', '7100-1035', 'tobiasmnd.sm@gmail.com',       'Res. Santa Marta, Antiguo Cuscatlán'),
+(36, 'Diana Carolina',   'Peñate de Benítez',  '06789015-6', '7100-1036', 'dianabp.cl@gmail.com',         'Col. América, San Salvador'),
+(37, 'Mauricio Alejandro','Rosales Vides',     '07890126-7', '7100-1037', 'mauriciorv.aj@gmail.com',      'Urb. Los Álamos, San Salvador'),
+(38, 'Kenia Guadalupe',  'Cisneros de Juárez', '08901237-8', '7100-1038', 'keniacj.gp@gmail.com',         'Col. Atlacatl, San Salvador'),
+(39, 'Félix Orlando',    'Barrera Mendoza',    '09012348-9', '7100-1039', 'felixbm.ol@outlook.com',       'Bo. El Calvario, San Salvador'),
+(40, 'Yanira Concepción','Recinos de Molina',  '00123459-0', '7100-1040', 'yaniramr.cp@gmail.com',        'Col. Quezaltepec, Mejicanos'),
+(41, 'Esteban Rodrigo',  'Jovel Herrera',      '01234560-9', '7100-1041', 'estebanjh.rg@gmail.com',       'Urb. Santa Eduviges, San Salvador');
 
 -- --------------------------------------------------------
 
@@ -69,110 +133,47 @@ CREATE TABLE `datos_estudiantes` (
 --
 
 INSERT INTO `datos_estudiantes` (`id_estudiante`, `id_responsable`, `id_seccion`, `nombres`, `apellidos`, `numero_nie`, `fecha_nacimiento`, `sexo`, `nacionalidad`, `correo_estudiante`, `telefono_estudiante`, `url_foto_imagen`, `direccion_vivienda`) VALUES
-(1, 1, 1, 'Anderson Steven', 'Aguilar Quinteros', '19761484', '2008-05-10', 'Masculino', 'Salvadoreña', '19761484@clases.edu.sv', '6960-9416', NULL, 'SIN DATO'),
-(2, 2, 1, 'Julio Ernesto', 'Alarcón Torres', '6302104', '2008-11-28', 'Masculino', 'Salvadoreña', '6302104@clases.edu.sv', '7488-2008', NULL, 'SIN DATO'),
-(3, 3, 1, 'Nathaly Saraí', 'Benavídez Reyes', '6655590', '2008-03-25', 'Femenino', 'Salvadoreña', '6655590@clases.edu.sv', '7239-8721', NULL, 'SIN DATO'),
-(4, 4, 1, 'Alisson Lilibeth', 'Campos Zúniga', '5484494', '2007-08-07', 'Femenino', 'Salvadoreña', '5484494@clases.edu.sv', '7833-1187', NULL, 'SIN DATO'),
-(5, 5, 1, 'Jason Steven', 'Cárdenas Orellana', '6862652', '2007-10-04', 'Masculino', 'Salvadoreña', '6862652@clases.edu.sv', '6965-3564', NULL, 'SIN DATO'),
-(6, 6, 1, 'Lenin Josafat', 'Castillo García', '3670449', '2008-06-11', 'Masculino', 'Salvadoreña', '3670449@clases.edu.sv', '6015-6793', NULL, 'SIN DATO'),
-(7, 7, 1, 'José Antonio', 'Castro Benítez', '5484276', '2008-07-05', 'Masculino', 'Salvadoreña', '5484276@clases.edu.sv', '7046-6821', NULL, 'SIN DATO'),
-(8, 8, 1, 'Génesis Stacy', 'Coreas Quiroz', '5485267', '2008-09-24', 'Femenino', 'Salvadoreña', '5485267@clases.edu.sv', '7854-3198', NULL, 'SIN DATO'),
-(9, 9, 1, 'Mirna Melissa', 'Cruz Nieto', '2504413', '2008-01-26', 'Femenino', 'Salvadoreña', '2504413@clases.edu.sv', '7627-8276', NULL, 'SIN DATO'),
-(10, 10, 1, 'Katherine Yaneth', 'Flores León', '5357169', '2007-06-03', 'Femenino', 'Salvadoreña', '5357169@clases.edu.sv', '7829-2542', NULL, 'SIN DATO'),
-(11, 11, 1, 'Kevin Alexander', 'Gavidia Carrillo', '19759464', '2008-02-24', 'Masculino', 'Salvadoreña', '19759464@clases.edu.sv', '7507-7686', NULL, 'SIN DATO'),
-(12, 12, 1, 'Dayris Emily', 'Granados Flores', '5484319', '2008-05-26', 'Femenino', 'Salvadoreña', '5484319@clases.edu.sv', '7401-0838', NULL, 'SIN DATO'),
-(13, 13, 1, 'Fredy Mauricio', 'Henríquez Álvarez', '4033134', '2008-03-27', 'Masculino', 'Salvadoreña', '4033134@clases.edu.sv', '7880-5004', NULL, 'SIN DATO'),
-(14, 14, 1, 'Naffry Gustavo', 'Henríquez Castillo', '6301884', '2008-01-28', 'Masculino', 'Salvadoreña', '6301884@clases.edu.sv', '6119-9491', NULL, 'SIN DATO'),
-(15, 15, 1, 'Katerin Marisol', 'Hernández González', '6263799', '2008-02-17', 'Femenino', 'Salvadoreña', '6263799@clases.edu.sv', '68681048', NULL, 'SIN DATO'),
-(16, 16, 1, 'Dugan Emmanuel', 'Hernández Maldonado', '2886870', '2007-12-12', 'Masculino', 'Salvadoreña', '2886870@clases.edu.sv', '7733-9575', NULL, 'SIN DATO'),
-(17, 17, 1, 'Joseph Stanley', 'López Benavides', '5484279', '2008-06-15', 'Masculino', 'Salvadoreña', '5484279@clases.edu.sv', '7327-3504', NULL, 'SIN DATO'),
-(18, 18, 1, 'Christopher Daniel', 'Manzanares Ascencio', '1985909', '2006-08-27', 'Masculino', 'Salvadoreña', '1985909@clases.edu.sv', '7535-2083', NULL, 'SIN DATO'),
-(19, 19, 1, 'Henry Eliseo', 'Medrano García', '4799428', '2008-05-21', 'Masculino', 'Salvadoreña', '4799428@clases.edu.sv', '7016-2253', NULL, 'SIN DATO'),
-(20, 20, 1, 'Graciela Irene', 'Mejía Bran', '19769664', '2008-06-17', 'Femenino', 'Salvadoreña', '19769664@clases.edu.sv', '6180-2543', NULL, 'SIN DATO'),
-(21, 21, 1, 'Rocío Michelle', 'Meléndez Jiménez', '19894562', '2008-04-08', 'Femenino', 'Salvadoreña', '19894562@clases.edu.sv', '6184-5915', NULL, 'SIN DATO'),
-(22, 22, 1, 'Kasandra Yanina', 'Membreño Argueta', '6301872', '2007-11-04', 'Femenino', 'Salvadoreña', '6301872@clases.edu.sv', '7967-4535', NULL, 'SIN DATO'),
-(23, 23, 1, 'Loida Eunice', 'Menjívar Castro', '3375518', '2008-07-31', 'Femenino', 'Salvadoreña', '3375518@clases.edu.sv', '7229-8519', NULL, 'SIN DATO'),
-(24, 24, 1, 'Abdías Gamaliel', 'Muñoz Mejía', '5357256', '2007-09-29', 'Masculino', 'Salvadoreña', '5357256@clases.edu.sv', '6063-2173', NULL, 'SIN DATO'),
-(25, 25, 1, 'Carlos Antonio', 'Naves Argueta', '5357286', '2007-10-01', 'Masculino', 'Salvadoreña', '5357286@clases.edu.sv', '6007-9286', NULL, 'SIN DATO'),
-(26, 26, 1, 'Daniel Antonio', 'Perdomo Aparicio', '19762752', '2007-10-12', 'Masculino', 'Salvadoreña', '19762752@clases.edu.sv', '7259-7437', NULL, 'SIN DATO'),
-(27, 27, 1, 'David Alexander', 'Pineda Mejía', '4033140', '2008-08-29', 'Masculino', 'Salvadoreña', '4033140@clases.edu.sv', '7148-8161', NULL, 'SIN DATO'),
-(28, 28, 1, 'Valeria Rachel', 'Pineda Moreno', '5485068', '2008-11-10', 'Femenino', 'Salvadoreña', '5485068@clases.edu.sv', '7630-4795', NULL, 'SIN DATO'),
-(29, 29, 1, 'Alcir Gustavo', 'Quintanilla Rodríguez', '2886976', '2008-04-12', 'Masculino', 'Salvadoreña', '2886976@clases.edu.sv', '7948-4912', NULL, 'SIN DATO'),
-(30, 30, 1, 'José Ernesto', 'Rivera Cortez', '5822257', '2008-03-04', 'Masculino', 'Salvadoreña', '5822257@clases.edu.sv', '7013-9824', NULL, 'SIN DATO'),
-(31, 31, 1, 'Jefferson Alexander', 'Rodríguez Fernández', '4659115', '2009-05-16', 'Masculino', 'Salvadoreña', '4659115@clases.edu.sv', '7050-5854', NULL, 'SIN DATO'),
-(32, 32, 1, 'Jason Daniel', 'Rodríguez Quinteros', '19761439', '2008-08-10', 'Masculino', 'Salvadoreña', '19761439@clases.edu.sv', '7516-9086', NULL, 'SIN DATO'),
-(33, 33, 1, 'Alison Gisele', 'Rosales Muñoz', '6554969', '2008-01-31', 'Femenino', 'Salvadoreña', '6554969@clases.edu.sv', '6025-4760', NULL, 'SIN DATO'),
-(34, 34, 1, 'Jostin Smith', 'Salgado Chávez', '5301969', '2007-08-04', 'Masculino', 'Salvadoreña', '5301969@clases.edu.sv', '6863-9972', NULL, 'SIN DATO'),
-(35, 35, 1, 'Johny Alexander', 'Serrano Hernández', '3294742', '2008-02-09', 'Masculino', 'Salvadoreña', '3294742@clases.edu.sv', '7946-5135', NULL, 'SIN DATO'),
-(36, 36, 1, 'Rosmery Angelina', 'Sigarán Pineda', '5942182', '2008-05-23', 'Femenino', 'Salvadoreña', '5942182@clases.edu.sv', '7939-0193', NULL, 'SIN DATO'),
-(37, 37, 1, 'Derian Julián', 'Turcios Segovia', '5484295', '2007-07-02', 'Masculino', 'Salvadoreña', '5484295@clases.edu.sv', '7016-0985', NULL, 'SIN DATO'),
-(38, 38, 1, 'Jonathan Antonio', 'Ulloa Cisneros', '3670448', '2007-12-04', 'Masculino', 'Salvadoreña', '3670448@clases.edu.sv', '7961-7135', NULL, 'SIN DATO'),
-(39, 39, 1, 'José Antonio', 'Vargas Lemus', '5942183', '2007-12-06', 'Masculino', 'Salvadoreña', '5942183@clases.edu.sv', '7313-8247', NULL, 'SIN DATO'),
-(40, 40, 1, 'Kasandra Gisel', 'Vásquez Lovo', '6046977', '2008-07-28', 'Femenino', 'Salvadoreña', '6046977@clases.edu.sv', '7786-8065', NULL, 'SIN DATO'),
-(41, 41, 1, 'Kevin Alberto', 'Villacorta Posada', '19761326', '2008-12-14', 'Masculino', 'Salvadoreña', '19761326@clases.edu.sv', '6065-3218', NULL, 'SIN DATO');
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `datos_responsables`
---
-
-CREATE TABLE `datos_responsables` (
-  `id_responsable` int(11) NOT NULL,
-  `nombres` varchar(50) NOT NULL,
-  `apellidos` varchar(50) NOT NULL,
-  `numero_dui` varchar(10) NOT NULL,
-  `telefono` varchar(15) DEFAULT NULL,
-  `correo` varchar(100) DEFAULT NULL,
-  `direccion_vivienda` varchar(100) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Volcado de datos para la tabla `datos_responsables`
---
-
-INSERT INTO `datos_responsables` (`id_responsable`, `nombres`, `apellidos`, `numero_dui`, `telefono`, `correo`, `direccion_vivienda`) VALUES
-(1, 'Misael Antonio', 'Aguilar Quinteros', '05744937-8', '7325-1441', 'Misaelaguilar1990@outlook.com', NULL),
-(2, 'Roxana Guadalupe', 'Torres de Alarcón', '01812180-2', '7053-1174', 'roxanaruiz1921@gmail.com', NULL),
-(3, 'María Antonia', 'Reyes Machado', '00700809-1', '7565-7164', 'reyeztony529@gmail.com', NULL),
-(4, 'Guillermo Antonio', 'Campos', '01567825-8', '7782-6677', 'guillermocampos@gmail.com', NULL),
-(5, 'Ana Josefa', 'Orellana Cisneros', '01213926-3', '7018-8672', 'orellanajosefa22@gmail.com', NULL),
-(6, 'Dayra Guiacely', 'García Martínez', '02925761-6', '7201-6427', 'Guiacely11@gmail.com', NULL),
-(7, 'Ana Rosaura', 'Benítez de Castro', '02730574-8', '6310-8548', 'ana.rosaura.benitez@clases.edu.sv', NULL),
-(8, 'Karla Lisvania', 'Quiroz de Coreas', '02885648-3', '7158-3932', 'genesisstacyc@gmail.com', NULL),
-(9, 'Ana Lidia', 'Nieto Landaverde', '03604523-2', '7017-6167', 'analidialandaverde@gmail.com', NULL),
-(10, 'María Ester', 'León Serrano', '02691688-9', '7170-4049', 'floresyaneth165@gmail.com', NULL),
-(11, 'María de los Angeles', 'Carrillo Ascencio', '00516594-4', '7592-1346', 'kevincarrillo75077686@gmail.com', NULL),
-(12, 'Sandra Xiomara', 'Granados', '03928608-1', '7948-0943', 'sgranados31188@gmail.com', NULL),
-(13, 'Mirna Elizabeth', 'Álvarez de Henríquez', '03426008-0', '7850-5004', 'amau72181@gmail.com', NULL),
-(14, 'Katia Yasmín', 'Castillo de Henríquez', '02100270-8', '7006-6062', 'castillonafry@gmail.com', NULL),
-(15, 'Rosa Elsa', 'González Argueta', '03482274-3', '7936-5397', 'gonsalesrosa093@gmail.com', NULL),
-(16, 'Bartola', 'Maldonado Euceda', '00167460-8', '7295-5941', 'melvinfcb.mohl@gmail.com', NULL),
-(17, 'Ana Marlene', 'Benavides de López', '00327166-8', '7697-5061', 'benavidesana296@gmail.com', NULL),
-(18, 'Jacquelinne Carolina', 'Ascencio Ramírez', '03595529-8', '6435-7605', 'karollmc.09@gmail.com', NULL),
-(19, 'Eugenio', 'Medrano Bermúdez', '00640034-7', '7004-1729', 'eugeniomedrano4@gmail.com', NULL),
-(20, 'Alba Nydia', 'Bran de Mejía', '00991380-2', '6180-2543', 'alymejia83@gmail.com', NULL),
-(21, 'Ana Yanira', 'Meléndez Cardona', '00642125-4', '75293565', 'argeliomelendez9@gmail.com', NULL),
-(22, 'Sandra Isabel', 'Membreño Argueta', '02244770-7', '7670-3284', 'sandramembre14@gmail.com', NULL),
-(23, 'Marta Verónica', 'Castro de Menjívar', '02108491-2', '7821-6202', 'marta134castro@gmail.com', NULL),
-(24, 'Silvia Lorena', 'Mejía Quintanilla', '00091654-4', '6964-6198', 'lenylit1975@gmail.com', NULL),
-(25, 'Marco Antonio', 'Naves Cruz', '02933519-7', '7781-9756', 'marnaves0380@gmail.com', NULL),
-(26, 'Heber Antonio', 'Perdomo Hernández', '01853544-1', '7288-6382', 'heberperdomo78@icloud.com', NULL),
-(27, 'Elsy Noemy', 'Mejía de Pineda', '00682122-6', '7419-2115', 'daviipineda19@gmail.com', NULL),
-(28, 'Karla Marisol', 'Moreno de Pineda', '03785457-9', '7748-5216', 'karlita_vyf@hotmail.com', NULL),
-(29, 'Alcir Gustavo', 'Quintanilla Rodríguez', '00537201-2', '7810-2829', 'alcirgustavo12@gmail.com', NULL),
-(30, 'Raúl Ernesto', 'Rivera Gómez', '02773004-0', '7626-8791', 'raulernesto0407@gmail.com', NULL),
-(31, 'Franky Iván', 'Rodríguez Andrade', '01021195-4', '7704-1872', 'f.ira14@hotmail.com', NULL),
-(32, 'Francisco Alexis', 'Rodríguez Quinteros', '06449661-1', '6152-2010', 'alexquinteros895@gmail.com', NULL),
-(33, 'José Enrrique', 'Rosales Cabezas', '01035038-7', '6002-3245', 'enriquerosales@gmail.com', NULL),
-(34, 'Isis Yaneth', 'Chávez Rodríguez', '03192359-0', '7284-0181', 'yanethchavezrodriguez40@gmail.com', NULL),
-(35, 'Luz Marina', 'Hernández de Serrano', '01098292-9', '7888-9727', 'luzhdez8080@gmail.com', NULL),
-(36, 'Daysi', 'Pineda Hernández', '01087165-7', '7066-8540', 'daysipineda582@gmail.com', NULL),
-(37, 'Griselda Yaneth', 'Segovia de Turcios', '03626125-2', '7789-4605', 'GriseldaYanethsegovia95@gmail.com', NULL),
-(38, 'Oscar Antonio', 'Ulloa Ramos', '01273701-1', '7852-7264', 'ulloaramos1976@hotmail.com', NULL),
-(39, 'Ana Evelyn', 'Lemus de Vargas', '03980107-7', '7977-6120', 'anaevelynvargas1988@gmail.com', NULL),
-(40, 'Sandra Yanira', 'Lovo de Vásquez', '00182905-9', '7728-4122', 'yaniralovo3@gmail.com', NULL),
-(41, 'Ana Jeanette', 'Posada Cañenguez', '02418985-0', '7044-4345', 'posadacanenguez16@gmail.com', NULL);
+(1,  1,  1, 'Diego Alejandro',   'López Cruz',         'NIE-10000001', '2008-03-12', 'Masculino', 'Salvadoreña', '10000001@clases.edu.sv', '7200-0001', NULL, 'Col. Escalón, San Salvador'),
+(2,  2,  1, 'Valentina Sofía',   'Hernández Vásquez',  'NIE-10000002', '2008-07-19', 'Femenino',  'Salvadoreña', '10000002@clases.edu.sv', '7200-0002', NULL, 'Res. Santa Elena, Antiguo Cuscatlán'),
+(3,  3,  1, 'Sebastián Andrés',  'Pérez Guzmán',       'NIE-10000003', '2007-11-05', 'Masculino', 'Salvadoreña', '10000003@clases.edu.sv', '7200-0003', NULL, 'Bo. San Jacinto, San Salvador'),
+(4,  4,  1, 'Camila Fernanda',   'Gómez Reyes',        'NIE-10000004', '2008-01-23', 'Femenino',  'Salvadoreña', '10000004@clases.edu.sv', '7200-0004', NULL, 'Col. Miramonte, San Salvador'),
+(5,  5,  1, 'Mateo Gabriel',     'Ramos Flores',       'NIE-10000005', '2007-09-30', 'Masculino', 'Salvadoreña', '10000005@clases.edu.sv', '7200-0005', NULL, 'Urb. Bello Horizonte, San Salvador'),
+(6,  6,  1, 'Isabella Renata',   'Torres Molina',      'NIE-10000006', '2008-04-14', 'Femenino',  'Salvadoreña', '10000006@clases.edu.sv', '7200-0006', NULL, 'Col. Zacamil, Mejicanos'),
+(7,  7,  1, 'Samuel Eduardo',    'Molina Zelaya',      'NIE-10000007', '2008-06-28', 'Masculino', 'Salvadoreña', '10000007@clases.edu.sv', '7200-0007', NULL, 'Col. San Benito, San Salvador'),
+(8,  8,  1, 'Luciana Beatriz',   'Ochoa Díaz',         'NIE-10000008', '2007-12-09', 'Femenino',  'Salvadoreña', '10000008@clases.edu.sv', '7200-0008', NULL, 'Res. Los Laureles, Santa Tecla'),
+(9,  9,  1, 'Emilio José',       'Renderos Chávez',    'NIE-10000009', '2008-02-17', 'Masculino', 'Salvadoreña', '10000009@clases.edu.sv', '7200-0009', NULL, 'Col. Las Mercedes, Soyapango'),
+(10, 10, 1, 'Mariana Celeste',   'Portillo Alvarado',  'NIE-10000010', '2008-08-03', 'Femenino',  'Salvadoreña', '10000010@clases.edu.sv', '7200-0010', NULL, 'Bo. La Vega, San Marcos'),
+(11, 11, 1, 'Nicolás Iván',      'Merino Guzmán',      'NIE-10000011', '2007-05-22', 'Masculino', 'Salvadoreña', '10000011@clases.edu.sv', '7200-0011', NULL, 'Col. Floresta, San Salvador'),
+(12, 12, 1, 'Daniela Marcela',   'Peña Reyes',         'NIE-10000012', '2008-10-11', 'Femenino',  'Salvadoreña', '10000012@clases.edu.sv', '7200-0012', NULL, 'Urb. Lomas de San Francisco, SF'),
+(13, 13, 2, 'Ángel Armando',     'Bonilla Soriano',    'NIE-10000013', '2007-07-16', 'Masculino', 'Salvadoreña', '10000013@clases.edu.sv', '7200-0013', NULL, 'Col. Jardines de Guadalupe, Antiguo'),
+(14, 14, 2, 'Melanie Andrea',    'Cabrera Castellanos','NIE-10000014', '2008-03-27', 'Femenino',  'Salvadoreña', '10000014@clases.edu.sv', '7200-0014', NULL, 'Bo. Santa Anita, San Salvador'),
+(15, 15, 2, 'Rodrigo Felipe',    'Nolasco Interiano',  'NIE-10000015', '2007-10-08', 'Masculino', 'Salvadoreña', '10000015@clases.edu.sv', '7200-0015', NULL, 'Col. Madre Selva, Antiguo Cuscatlán'),
+(16, 16, 2, 'Valeria Estefanía', 'Ruiz Serrano',       'NIE-10000016', '2008-05-31', 'Femenino',  'Salvadoreña', '10000016@clases.edu.sv', '7200-0016', NULL, 'Urb. Monte Bello, San Salvador'),
+(17, 17, 2, 'Andrés Mauricio',   'Pacheco Luna',       'NIE-10000017', '2007-08-20', 'Masculino', 'Salvadoreña', '10000017@clases.edu.sv', '7200-0017', NULL, 'Col. Centroamérica, San Salvador'),
+(18, 18, 2, 'Alejandra Paola',   'Aguilar Campos',     'NIE-10000018', '2008-01-04', 'Femenino',  'Salvadoreña', '10000018@clases.edu.sv', '7200-0018', NULL, 'Res. Jardines del Valle, SA'),
+(19, 19, 2, 'Bryan Josué',       'Melara Coto',        'NIE-10000019', '2007-11-29', 'Masculino', 'Salvadoreña', '10000019@clases.edu.sv', '7200-0019', NULL, 'Bo. Modelo, San Salvador'),
+(20, 20, 2, 'Gabriela Nicol',    'Sánchez Quintero',   'NIE-10000020', '2008-09-15', 'Femenino',  'Salvadoreña', '10000020@clases.edu.sv', '7200-0020', NULL, 'Col. San Luis, San Salvador'),
+(21, 21, 2, 'Javier Ernesto',    'Monge Villeda',      'NIE-10000021', '2007-06-10', 'Masculino', 'Salvadoreña', '10000021@clases.edu.sv', '7200-0021', NULL, 'Urb. Villa Centroamérica, Soyapango'),
+(22, 22, 2, 'Karina Alejandra',  'Acosta Portillo',    'NIE-10000022', '2008-04-22', 'Femenino',  'Salvadoreña', '10000022@clases.edu.sv', '7200-0022', NULL, 'Col. Layco, San Salvador'),
+(23, 23, 3, 'Kevin Rolando',     'Mejía Herrera',      'NIE-10000023', '2007-09-05', 'Masculino', 'Salvadoreña', '10000023@clases.edu.sv', '7200-0023', NULL, 'Bo. San Antonio Abad, SS'),
+(24, 24, 3, 'Paola Rebeca',      'Rivera Amaya',       'NIE-10000024', '2008-07-01', 'Femenino',  'Salvadoreña', '10000024@clases.edu.sv', '7200-0024', NULL, 'Col. Costa Rica, San Salvador'),
+(25, 25, 3, 'Gerardo Eliseo',    'Aguiluz Fuentes',    'NIE-10000025', '2007-12-18', 'Masculino', 'Salvadoreña', '10000025@clases.edu.sv', '7200-0025', NULL, 'Res. Lomas del Río, San Salvador'),
+(26, 26, 3, 'Adriana Gabriela',  'García Medina',      'NIE-10000026', '2008-02-09', 'Femenino',  'Salvadoreña', '10000026@clases.edu.sv', '7200-0026', NULL, 'Col. Jardines de Cuzcatlán, SS'),
+(27, 27, 3, 'Raúl Alfredo',      'Orellana Galdámez',  'NIE-10000027', '2007-10-23', 'Masculino', 'Salvadoreña', '10000027@clases.edu.sv', '7200-0027', NULL, 'Urb. San Jacinto, San Salvador'),
+(28, 28, 3, 'Stephanie Nicole',  'Galdámez Rivas',     'NIE-10000028', '2008-06-07', 'Femenino',  'Salvadoreña', '10000028@clases.edu.sv', '7200-0028', NULL, 'Col. Ramírez, San Salvador'),
+(29, 29, 3, 'Erick Antonio',     'Rivas Ventura',      'NIE-10000029', '2007-08-14', 'Masculino', 'Salvadoreña', '10000029@clases.edu.sv', '7200-0029', NULL, 'Bo. Candelaria, San Salvador'),
+(30, 30, 3, 'Nadia Consuelo',    'Montes Argueta',     'NIE-10000030', '2008-11-26', 'Femenino',  'Salvadoreña', '10000030@clases.edu.sv', '7200-0030', NULL, 'Col. San Carlos, Soyapango'),
+(31, 31, 1, 'Emanuel Rolando',   'Espinoza Bonilla',   'NIE-10000031', '2007-04-03', 'Masculino', 'Salvadoreña', '10000031@clases.edu.sv', '7200-0031', NULL, 'Urb. El Rosal, San Salvador'),
+(32, 32, 1, 'Xiomara Marlene',   'Flores Guardado',    'NIE-10000032', '2008-09-20', 'Femenino',  'Salvadoreña', '10000032@clases.edu.sv', '7200-0032', NULL, 'Col. La Ceiba, San Salvador'),
+(33, 33, 2, 'Abraham Josué',     'Galindo Morán',      'NIE-10000033', '2007-07-08', 'Masculino', 'Salvadoreña', '10000033@clases.edu.sv', '7200-0033', NULL, 'Bo. Santa Bárbara, San Salvador'),
+(34, 34, 2, 'Fátima Yamileth',   'Lima Peñate',        'NIE-10000034', '2008-03-17', 'Femenino',  'Salvadoreña', '10000034@clases.edu.sv', '7200-0034', NULL, 'Col. Modelo, San Salvador'),
+(35, 35, 3, 'Cristian Samuel',   'Durán Rosales',      'NIE-10000035', '2007-11-11', 'Masculino', 'Salvadoreña', '10000035@clases.edu.sv', '7200-0035', NULL, 'Res. Santa Marta, Antiguo Cuscatlán'),
+(36, 36, 3, 'Rebeca Josseline',  'Benítez Cisneros',   'NIE-10000036', '2008-05-02', 'Femenino',  'Salvadoreña', '10000036@clases.edu.sv', '7200-0036', NULL, 'Col. América, San Salvador'),
+(37, 37, 1, 'Oscar Mauricio',    'Vides Barrera',      'NIE-10000037', '2007-09-27', 'Masculino', 'Salvadoreña', '10000037@clases.edu.sv', '7200-0037', NULL, 'Urb. Los Álamos, San Salvador'),
+(38, 38, 2, 'Evelyn Guadalupe',  'Juárez Recinos',     'NIE-10000038', '2008-08-16', 'Femenino',  'Salvadoreña', '10000038@clases.edu.sv', '7200-0038', NULL, 'Col. Atlacatl, San Salvador'),
+(39, 39, 3, 'Isaías Orlando',    'Mendoza Jovel',      'NIE-10000039', '2007-06-24', 'Masculino', 'Salvadoreña', '10000039@clases.edu.sv', '7200-0039', NULL, 'Bo. El Calvario, San Salvador'),
+(40, 40, 1, 'Lilian Concepción', 'Molina Coto',        'NIE-10000040', '2008-12-05', 'Femenino',  'Salvadoreña', '10000040@clases.edu.sv', '7200-0040', NULL, 'Col. Quezaltepec, Mejicanos'),
+(41, 41, 2, 'Leonardo Rodrigo',  'Herrera López',      'NIE-10000041', '2007-10-31', 'Masculino', 'Salvadoreña', '10000041@clases.edu.sv', '7200-0041', NULL, 'Urb. Santa Eduviges, San Salvador');
 
 -- --------------------------------------------------------
 
@@ -194,7 +195,9 @@ CREATE TABLE `secciones` (
 --
 
 INSERT INTO `secciones` (`id_seccion`, `año_lectivo`, `grado`, `seccion`, `id_docente`, `especialidad`) VALUES
-(1, '2025', 'TERCER AÑO', 'A', 1, 'General');
+(1, '2026', 'PRIMER AÑO',   'A', 1, 'General'),
+(2, '2026', 'SEGUNDO AÑO',  'B', 2, 'General'),
+(3, '2026', 'TERCER AÑO',   'A', 3, 'General');
 
 -- --------------------------------------------------------
 
@@ -215,7 +218,9 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`id_usuario`, `usuario`, `clave_hash`, `id_docente`, `created_at`) VALUES
-(1, 'miriamG', 'e34993484ubew34848', 1, '2026-06-26 13:28:58');
+(1, 'carlosM',  '$2y$10$xJ8kL3mN9pQ2rS5tU7vW0eYcF1gH4iJ6kL8mN0pQ3rS6tU9vWxYz', 1, '2026-01-10 08:00:00'),
+(2, 'elenaV',   '$2y$10$aB2cD4eF6gH8iJ0kL2mN4pQ6rS8tU0vW2xY4zA6bC8dE0fG2hI4j', 2, '2026-01-10 08:05:00'),
+(3, 'jorgeS',   '$2y$10$kL0mN2pQ4rS6tU8vW0xY2zA4bC6dE8fG0hI2jK4lM6nO8pQ0rS2t', 3, '2026-01-10 08:10:00');
 
 --
 -- Índices para tablas volcadas
@@ -265,58 +270,35 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
---
--- AUTO_INCREMENT de la tabla `datos_docente`
---
 ALTER TABLE `datos_docente`
-  MODIFY `id_docente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_docente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
---
--- AUTO_INCREMENT de la tabla `datos_estudiantes`
---
 ALTER TABLE `datos_estudiantes`
   MODIFY `id_estudiante` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
---
--- AUTO_INCREMENT de la tabla `datos_responsables`
---
 ALTER TABLE `datos_responsables`
   MODIFY `id_responsable` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 
---
--- AUTO_INCREMENT de la tabla `secciones`
---
 ALTER TABLE `secciones`
-  MODIFY `id_seccion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_seccion` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
---
--- AUTO_INCREMENT de la tabla `usuarios`
---
 ALTER TABLE `usuarios`
-  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Restricciones para tablas volcadas
 --
 
---
--- Filtros para la tabla `datos_estudiantes`
---
 ALTER TABLE `datos_estudiantes`
   ADD CONSTRAINT `fk_estudiante_responsable` FOREIGN KEY (`id_responsable`) REFERENCES `datos_responsables` (`id_responsable`) ON UPDATE CASCADE,
   ADD CONSTRAINT `fk_estudiante_seccion` FOREIGN KEY (`id_seccion`) REFERENCES `secciones` (`id_seccion`) ON DELETE SET NULL ON UPDATE CASCADE;
 
---
--- Filtros para la tabla `secciones`
---
 ALTER TABLE `secciones`
   ADD CONSTRAINT `fk_seccion_docente` FOREIGN KEY (`id_docente`) REFERENCES `datos_docente` (`id_docente`) ON DELETE SET NULL ON UPDATE CASCADE;
 
---
--- Filtros para la tabla `usuarios`
---
 ALTER TABLE `usuarios`
   ADD CONSTRAINT `fk_usuario_docente` FOREIGN KEY (`id_docente`) REFERENCES `datos_docente` (`id_docente`) ON DELETE SET NULL ON UPDATE CASCADE;
+
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
